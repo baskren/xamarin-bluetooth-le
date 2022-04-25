@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmCross.Plugins.BLE", "MvvmCross.Plugins.BLE\MvvmCross.Plugins.BLE.csproj", "{83F1DFFB-A653-45DD-BE81-C02374C6DB07}"
 EndProject
@@ -983,6 +983,8 @@ Global
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.AppStore|x86.Build.0 = Release|x86
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.AppStore|x86.Deploy.0 = Release|x86
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|Any CPU.Build.0 = Debug|x86
+		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|ARM.ActiveCfg = Debug|ARM
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|ARM.Build.0 = Debug|ARM
 		{25E04E05-F867-4F64-813D-AAFE0BA171B0}.Debug|ARM.Deploy.0 = Debug|ARM
