@@ -22,6 +22,20 @@ namespace Plugin.BLE.UWP
             AdvertisementRecords = advertisementRecords;
         }
 
+        public void NativeDisconnect()
+        {
+            ClearServices();
+
+            var bluetoothAddress = Convert.ToUInt64(Id.ToString("N").Substring(20), 16);
+            NativeDevice.BluetoothLEDevice.Dispose();
+            Task.Run(async () =>
+            {
+                var nativeDevice = await BluetoothLEDevice.FromBluetoothAddressAsync(bluetoothAddress);
+                NativeDevice = new ObservableBluetoothLEDevice(nativeDevice.DeviceInformation);
+            });
+
+        }
+
         internal void Update(short btAdvRawSignalStrengthInDBm, IReadOnlyList<AdvertisementRecord> advertisementData)
         {
             this.Rssi = btAdvRawSignalStrengthInDBm;

@@ -105,12 +105,16 @@ namespace Plugin.BLE.UWP
         {
             // Windows doesn't support disconnecting, so currently just dispose of the device
             Trace.Message($"Disconnected from device with ID:  {device.Id}");
-            
+            /*
             if (device.NativeDevice is ObservableBluetoothLEDevice)
             {
                 ((Device)device).ClearServices();
                 device.Dispose();                
             }
+            */
+
+            if (device is UWP.Device uwpDevice)
+                uwpDevice.NativeDisconnect();
         }
 
         public override async Task<IDevice> ConnectToKnownDeviceAsync(Guid deviceGuid, ConnectParameters connectParameters = default, CancellationToken cancellationToken = default)
