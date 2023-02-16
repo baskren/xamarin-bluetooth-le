@@ -151,6 +151,7 @@ namespace Plugin.BLE.Abstractions
                 return Task.FromResult(false);
             }
 
+            /*
             return TaskBuilder.FromEvent<bool, EventHandler<DeviceEventArgs>, EventHandler<DeviceErrorEventArgs>>(
                execute: () => DisconnectDeviceNative(device),
 
@@ -175,6 +176,9 @@ namespace Plugin.BLE.Abstractions
                }),
                subscribeReject: handler => DeviceConnectionError += handler,
                unsubscribeReject: handler => DeviceConnectionError -= handler);
+            */
+
+            return Task.Run(() => DisconnectDeviceNative(device));
         }
 
         private void CleanupScan()
